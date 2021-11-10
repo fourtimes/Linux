@@ -12,10 +12,13 @@ ssh-copy-id username@remote_host
 ssh username@remote_host
 
 # Disabling Password Authentication on your Server
-sudo vi /etc/ssh/sshd_config
+sudo vim /etc/ssh/sshd_config
     filename: /etc/ssh/sshd_config 
     PubkeyAuthentication `no`
     PasswordAuthentication `no`
+
+# validation
+sshd -t
 
 # restart the ssh service 
 sudo systemctl restart ssh
