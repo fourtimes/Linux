@@ -17,3 +17,16 @@ To access the password authentication:-
 2. To update the system:- **sudo apt update**
 
 3. Install the packages:- **sudo apt install (package-name)**
+
+for i in {1..10}; do
+echo \$i
+done
+
+GoalKicker.com – Bash Notes for Professionals 40
+case "$BASH_VERSION" in
+ [34]*)
+    echo {1..4}
+    ;;  
+  *)
+    seq -s" " 1 4
+esac
