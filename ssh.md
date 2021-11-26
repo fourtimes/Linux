@@ -5,6 +5,8 @@ ssh-keygen
 
 # Copying Your Public Key Using ssh-copy-id
 ssh-copy-id username@remote_host
+
+Refference:-
     localhost- ip address;
     remote_host - website;
 
