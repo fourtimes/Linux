@@ -1,4 +1,4 @@
-### Bytes Conversion Chart
+**Bytes Conversion Chart:**
 
 | Bytes          | To change  |
 | -------------- | ---------- |
@@ -8,9 +8,11 @@
 | 1024 Kilobytes | 1 Megabyte |
 | 1024 Megabytes | 1 Gigabyte |
 
-### Shell Script:-
-A shell script is a text file that **contains a sequence of commands for a UNIX-based operating system.** It is called a shell script because it combines a sequence of commands, that would otherwise have to be typed into the keyboard one at a time, into a single script.
+**Shell Script:-**
 
+ A shell script is a text file that **contains a sequence of commands for a UNIX-based operating system.** It is called a shell script because it combines a sequence of commands, that would otherwise have to be typed into the keyboard one at a time, into a single script.
+
+---
 mkdir a b c d
 
 ---
