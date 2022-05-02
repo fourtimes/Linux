@@ -3,7 +3,7 @@
 2. To access the password authentication
 
 
-**1. To access the key file authentication:-**
+**1. ssh Key file authentication:-**
 
  To Access the read permission ssh:-
 ```bash
@@ -23,7 +23,7 @@
 ```bash
  sudo apt install (package-name)
 ```
-**2. To access the password authentication:-**
+**2. ssh password authentication:-**
 
 1. To connect server using ssh:-
 ```bash
