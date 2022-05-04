@@ -1,2 +1,4 @@
-1. root directory details
-2. 
+1. Root directory details
+2. User and Group Creation
+3. SSH key connection using pem file and password
+4. 
