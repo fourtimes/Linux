@@ -24,12 +24,7 @@ cat /etc/group
 # set a password in group user
 sudo gpasswd groupname
 
-# Login to the user
-su username
-   (or)
-ssh username@ip_address
-   (or)
-shh username@localhost
+
  ```
 
 
@@ -38,6 +33,13 @@ shh username@localhost
 ```bash
 # create the user
 sudo useradd groupname
+
+# Login to the user
+su username
+   (or)
+ssh username@ip_address
+   (or)
+shh username@localhost
 
 # Delete the user
 sudo userdel username
