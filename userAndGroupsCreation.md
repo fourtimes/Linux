@@ -39,7 +39,7 @@ su username
    (or)
 ssh username@ip_address
    (or)
-shh username@localhost
+ssh username@localhost
 
 # Delete the user
 sudo userdel username
