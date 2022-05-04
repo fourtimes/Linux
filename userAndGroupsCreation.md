@@ -32,7 +32,7 @@ sudo gpasswd groupname
 
 ```bash
 # create the user
-sudo useradd groupname
+sudo useradd username
 
 # Login to the user
 su username
