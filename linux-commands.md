@@ -88,3 +88,4 @@
 |:wq!|Save and exit the vim file.|
 |alias -p|Listing all alias name|
 |lt --port (port-number)| to get the url and use this url to operate the another person|
+|sudo lsof -i -P|What are the instance are running|
