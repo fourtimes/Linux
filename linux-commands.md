@@ -54,7 +54,7 @@
 |uname -p|Print the processor.|
 |uname -n|Print the network node hostname.|
 |uname -o|Print the operating system.|
-|hostname|Use hostname to know your name in your host or network.|
+|hostname|To show your name of your host or network.|
 |hostname -I|To show IP address in your network.|
 |ip a| find the ip address.|
 |lscpu|To display information about the CPU on Linux.|
