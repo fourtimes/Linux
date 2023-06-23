@@ -7,8 +7,9 @@ ssh-keygen
 ssh-copy-id username@remote_host
 
 Refference:-
-    localhost- ip address;
-    remote_host - website;
+-----------
+    localhost => ip address;
+    remote_host => website;
 
 # Authenticating to Your Server Using SSH Keys
 ssh username@remote_host
