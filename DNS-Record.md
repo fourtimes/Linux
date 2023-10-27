@@ -1,4 +1,4 @@
-## What are the most common types of DNS record?
+# What are the most common types of DNS record?
 
 |S. No.| Record Type | Descritption|
 |-------|------------|-------------|
