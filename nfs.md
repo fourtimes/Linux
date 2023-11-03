@@ -7,7 +7,7 @@ _**Before we do nfs kernel installing, let's first update the system packages.**
 sudo apt update
 ```
 **_After update the packages, let's install the nfs-kernel-server_**
-```
+```sh
 sudo apt install nfs-kernel-server
 ```
 **_Create an NFS Export Directory_**
