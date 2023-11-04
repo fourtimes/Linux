@@ -39,7 +39,7 @@ sudo chmod 777 /mnt/nfs_share/
 ```sh
 # sudo vim /etc/exports
 
-/mnt/nfs_share  192.168.1.0/24(rw,sync,no_subtree_check)    # 192.168.43.0/24 - ip address depends on your system networks
+/mnt/nfs_share  192.168.1.0/24(rw,sync,no_subtree_check)    # 192.168.1.0/24 - ip address depends on your system networks.  we have allowed an entire subnet to have access to the NFS share.
 ```
 
 7. Export the NFS Share Directory
