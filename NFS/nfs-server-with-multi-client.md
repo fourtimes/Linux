@@ -36,7 +36,8 @@ sudo chown -R nobody:nogroup /mnt/nfs_share/
 sudo chmod 777 /mnt/nfs_share/
 ```
 6. Grant NFS Share Access to Client Systems
- we have allowed an entire subnet to have access to the NFS share.
+   
+we have allowed an entire subnet to have access to the NFS share.
 ```sh
 # sudo vim /etc/exports
 
