@@ -36,10 +36,11 @@ sudo chown -R nobody:nogroup /mnt/nfs_share/
 sudo chmod 777 /mnt/nfs_share/
 ```
 6. Grant NFS Share Access to Client Systems
+ we have allowed an entire subnet to have access to the NFS share.
 ```sh
 # sudo vim /etc/exports
 
-/mnt/nfs_share  192.168.1.0/24(rw,sync,no_subtree_check)    # 192.168.1.0/24 - ip address depends on your system networks.  we have allowed an entire subnet to have access to the NFS share.
+/mnt/nfs_share  192.168.1.0/24(rw,sync,no_subtree_check)    # 192.168.1.0/24 - ip address depends on your system networks.  
 ```
 
 7. Export the NFS Share Directory
