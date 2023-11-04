@@ -23,4 +23,18 @@ pvscan                  # List all physical volumes
 pvdisplay               # Display various attributes of physical volume(s)
 ```
 ![image](https://github.com/fourtimes/linux/assets/91359308/cdb66f77-82c6-47f0-92af-5a9b1f11bd78)
-7. 
+7. Next, Create a volume group.
+```sh
+vgcreate myvg /dev/xvdf /dev/xvdg              # myvg - as your wish to put volume group.
+```
+8. Display information about volume group.
+```sh
+vgs
+```
+![image](https://github.com/fourtimes/linux/assets/91359308/672b1dd1-54ea-4916-b8bf-26e1d47615d5)
+
+9. Create a logical volume.
+```sh
+lvcreate -n app -L 5G /dev/myvg               # app - your partition name, 5G - allocate 5G storage, myvg - volume group
+```
+10. 
