@@ -37,4 +37,3 @@ vgs
 ```sh
 lvcreate -n app -L 5G /dev/myvg               # app - your partition name, 5G - allocate 5G storage, myvg - volume group
 ```
-10. d
