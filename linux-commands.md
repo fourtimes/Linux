@@ -90,8 +90,10 @@
 |lt --port (port-number)| to get the url and use this url to operate the another person|
 |sudo lsof -i -P|What are the instance are running|
 |telnet serverIP port|Telnet can also be used to check if a specific port is open on a server.|For example, to check if port 22 is open on a server, run `telnet 38.76.11.19  22`|
+|nc -vz (localIP or remoteIP) (port)|This command is used to check the connectivity between to server as well as the localhost using ports.|nc -vz 38.76.11.19 **80**, nc -vz 38.76.11.19 **443**|
 |curl|curl is a command-line tool to transfer data to or from a server, using any of the supported protocols (HTTP, FTP, IMAP, POP3, SCP, SFTP, SMTP, TFTP, TELNET, LDAP, or FILE). | curl -l (url)|
 |sort -n| Listing the details as acending orders.|-|
 |wc -l| Count the total lines of the file|if the file has 6 lines... the output will be **6**|
 |uniq -c|Filter the duplicate values| **1** 1002000000000222222222222, **2** 102, **1** 101, **1** 103, **1** 10003|
 |awk|Print the values based on our needs|-|
+
