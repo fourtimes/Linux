@@ -93,4 +93,4 @@
 |curl|curl is a command-line tool to transfer data to or from a server, using any of the supported protocols (HTTP, FTP, IMAP, POP3, SCP, SFTP, SMTP, TFTP, TELNET, LDAP, or FILE). | curl -l (url)|
 |sort -n| Listing the details as acending orders.||
 |wc -l| Count the total lines of the file|if the file has 6 lines... the output will be **6**|
-|uniq -c|Filter the duplicate values| **1** 1002000000000222222222222,**2** 102,**1** 101,**1** 103, **1** 10003|
+|uniq -c|Filter the duplicate values| **1** 1002000000000222222222222, **2** 102, **1** 101, **1** 103, **1** 10003|
