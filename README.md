@@ -6,3 +6,6 @@
 6. Appache webserver Document Root
 7. Bytes Chart
 8. SSh key file Details
+9. NFS
+10. LVM
+11. 
