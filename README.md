@@ -8,4 +8,4 @@
 8. SSh key file Details
 9. NFS
 10. LVM
-11. 
+11. DNS Record details
