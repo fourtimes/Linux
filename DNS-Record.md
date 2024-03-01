@@ -9,7 +9,7 @@
 |5.|**TXT record**| Lets an admin store text notes in the record. These records are often used for `email security`.|
 |6.|**NS record**|Stores the name server for a `DNS entry`. |
 |7.|**SOA record**|Stores `admin information about a domain`.|
-|8.|**SRV record** |Specifies a `port for specific service`s.|
+|8.|**SRV record** |Specifies a `port for specific services`.|
 |9.|**PTR record** |Provides a domain name in `reverse-lookups`.|
 
 Note:
