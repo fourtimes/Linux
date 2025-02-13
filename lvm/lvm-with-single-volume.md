@@ -10,7 +10,6 @@ To install LVM on CentOS, Fedora, AlmaLinux, and Red Hat:
 ```sh
  sudo dnf install lvm2
 ```
-
 ### `Create partitions`
 ```sh
 fdisk -l
