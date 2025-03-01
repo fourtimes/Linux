@@ -56,3 +56,25 @@ http://localhost:8088
 http://public-ip:8088
 ```
 <img width="1426" alt="image" src="https://github.com/user-attachments/assets/f0ed109c-632a-426f-aa2e-9424c0986a42" />
+
+
+```service
+[Unit]
+Description=Apache Superset
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/venv
+ExecStart=/home/ubuntu/venv/bin/superset run -p 8088 --with-threads --reload --debugger --host 0.0.0.0
+Environment="PATH=/home/ubuntu/venv/bin:$PATH"
+Environment="SUPERSET_SECRET_KEY=Vm/qJyTZf3O9Ix6i3U1HClazf86teLDtza6aY1IVfUzA8Y054PvoIiZX"
+Environment="FLASK_APP=superset"
+Restart=always
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+```
