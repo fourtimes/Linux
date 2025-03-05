@@ -9,6 +9,7 @@ pip install virtualenv
 ```
 You can create and activate a virtual environment using:
 ```py
+sudo apt install python3.10-venv -y
 python3 -m venv venv
 . venv/bin/activate
 ```
