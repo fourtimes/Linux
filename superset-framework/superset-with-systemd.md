@@ -1,7 +1,7 @@
 ## Superset Installation using systemd service for ubuntu
 
 ```cmd
-sudo apt-get install build-essential libssl-dev libffi-dev python3-dev python3-pip libsasl2-dev libldap2-dev default-libmysqlclient-dev -y
+sudo apt install build-essential libssl-dev libffi-dev python3-dev python3-pip libsasl2-dev libldap2-dev default-libmysqlclient-dev -y
 ```
 Python Virtual Environment
 ```py
@@ -94,19 +94,18 @@ OAUTH_PROVIDERS = [
     'icon': 'fa-key',
     'remote_app': {
       'client_id': 'superset-ui-openid',
-      'client_secret': '4KqskUIQw11ZFUxixSfPMuz9Yc8It4cM',
-      'api_base_url': 'https://iam.radianterp.in/realms/radiant-org/protocol/',
-      'jwks_uri':'https://iam.radianterp.in/realms/radiant-org/protocol/openid-connect/certs',
-      'server_metadata_url': 'https://iam.radianterp.in/realms/radiant-org/.well-known/openid-configuration',
+      'client_secret': 'your-client-secret',
+      'api_base_url': 'https://{keycloackUrl}/realms/{your-realm}/protocol/',
+      'jwks_uri':'https://{keycloackUrl}/realms/{your-realm}/protocol/openid-connect/certs',
+      'server_metadata_url': 'https://{keycloackUrl}/realms/{your-realm}/.well-known/openid-configuration',
       'client_kwargs': {
           'scope': 'openid email',
           'roles_key': 'realm_access.roles'
-
       },
-      'access_token_url': 'https://iam.radianterp.in/realms/radiant-org/protocol/openid-connect/token',
-      'authorize_url': 'https://iam.radianterp.in/realms/radiant-org/protocol/openid-connect/auth',
-      'userinfo_uri': 'https://iam.radianterp.in/realms/radiant-org/protocol/openid-connect/userinfo',
-      'logout_url': 'https://iam.radianterp.in/realms/radiant-org/protocol/openid-connect/logout?redirect_uri=http://54.165.160.141:8088/logout'
+      'access_token_url': 'https://{keycloackUrl}/realms/{your-realm}/protocol/openid-connect/token',
+      'authorize_url': 'https://{keycloackUrl}/realms/{your-realm}/protocol/openid-connect/auth',
+      'userinfo_uri': 'https://{keycloackUrl}/realms/{your-realm}/protocol/openid-connect/userinfo',
+      'logout_url': 'https://{keycloackUrl}/realms/{your-realm}/protocol/openid-connect/logout?redirect_uri=http://54.165.160.141:8088/logout'
       }
   }
 ]
@@ -119,6 +118,7 @@ AUTH_ROLES_MAPPING = {
     'prd-superset-reader': ['Gamma'],
 }
 ```
+
 
 Add the `superset_config.py` file in systemd service file
 ```service
