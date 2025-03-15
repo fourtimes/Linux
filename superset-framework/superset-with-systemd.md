@@ -132,7 +132,7 @@ Group=ubuntu
 WorkingDirectory=/home/ubuntu/venv
 ExecStart=/home/ubuntu/venv/bin/superset run -p 8088 --with-threads --reload --debugger --host 0.0.0.0
 Environment="PATH=/home/ubuntu/venv/bin:$PATH"
-Environment="SUPERSET_SECRET_KEY=your-secret-key"  # Replace with your actual SECRET_KEY
+Environment="SUPERSET_SECRET_KEY=your-secret-key"  # Replace with your actual SECRET_KEY line 23
 Environment="FLASK_APP=superset"
 Environment="SUPERSET_CONFIG_PATH=/home/ubuntu/superset_config.py"  # If you have a custom configuration
 Restart=always
@@ -151,12 +151,68 @@ sudo systemctl start superset
 sudo systemctl status superset
 
 ```
-
 once done, check with browser using the below url:
-
-**if we use local server -**
+```url
+# if we use local server
 http://localhost:8088
 
-**if we use ec2 server -**
+# if we use ec2 server
 http://(public-ip):8088
+```
+## Reverse Proxy with Superset
+Install the nginx
+```
+sudo apt install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl status nginx
+```
+Configure custom vhost file
 
+```conf
+# sudo vim /etc/nginx/conf.d/your-domain
+
+server {
+    listen 80;
+    server_name your-domain;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name your-domain;
+
+
+    ssl_certificate /etc/nginx/ssl/certificate.crt;
+    ssl_certificate_key /etc/nginx/ssl/private.key;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers 'HIGH:!aNULL:!MD5';
+    ssl_prefer_server_ciphers on;
+
+    location / {
+        proxy_pass http://(publicIP):8088; # Replace with your application's address and port
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+
+        access_log /var/log/nginx/your-domain.access.log;
+        error_log /var/log/nginx/your-domain.error.log;
+    }
+}
+```
+copy the file sites-enabled from conf.d
+```cmd
+ln -s /etc/nginx/conf.d/your-domain ./
+```
+Restart the service
+```cmd
+sudo systemctl restart nginx
+```
+Validate the nginx vhost file
+```
+sudo nginx -t
+```
+Check with browser - http://your-domain
