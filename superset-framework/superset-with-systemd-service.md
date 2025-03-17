@@ -169,7 +169,7 @@ sudo systemctl status nginx
 ```
 Configure custom vhost file
 
-```conf
+```sh
 # sudo vim /etc/nginx/conf.d/your-domain
 
 server {
